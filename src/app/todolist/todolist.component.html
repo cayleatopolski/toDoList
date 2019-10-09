@@ -14,8 +14,8 @@
         </button>
       </ol>
     </div>
-    <form id="add" #addItemForm="ngForm" (ngSubmit)="AddATodo()">
-      <input type="text" placeholder="Add a Todo" />
+    <form id="add" #addItemForm="ngForm" (ngSubmit)="addATodo()">
+      <input type="text" name="todoItem" placeholder="Add a Todo" ngModel />
       <button>Add</button>
     </form>
   </section>

@@ -31,6 +31,7 @@ export class TodolistComponent implements OnInit {
   addATodo() {
     console.log("ehhhh");
     this.toDoList.push();
+    console.log(this.toDoList);
   }
 
   ngOnInit() {}
