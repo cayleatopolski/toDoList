@@ -1,4 +1,30 @@
 h1 {
   font-family: "Pacifico", cursive;
   font-size: 4em;
+  color: #fff;
+  text-shadow: 2px 5px #000;
+}
+
+h2 {
+  margin: 0;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#toDoList {
+  width: 75%;
+  height: 75%;
+  background: #fff;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+input {
+  height: 20px;
+  border-radius: 4px;
 }

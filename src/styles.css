@@ -2,4 +2,6 @@
 html,
 body {
   font-family: "Open Sans", sans-serif;
+  margin: 0;
+  background: linear-gradient(to right, #f857a6, #ff5858);
 }

@@ -1,16 +1,22 @@
-<section id="toDoList">
-  <h1>{{ greeting }}</h1>
-  <h2>TODO List</h2>
-  <p>A place to store your "todo's"</p>
-  <input type="text" placeholder="Filter your todo's" />
-  <div id="listItems">
-    <ol *ngFor="let item of toDoList; index as i">
-      <li></li>
-      <button id="deleteItem">
-        <img src="src/assets/delete.png" alt="A red delete icon" />
-      </button>
-    </ol>
+<section id="content">
+  <div id="greeting">
+    <h1>{{ greeting }}</h1>
   </div>
-  <input type="text" placeholder="Add a Todo" />
-  <button (onClick)="AddATodo()">Add</button>
+  <section id="toDoList">
+    <h2>TODO List</h2>
+    <p>A place to store your "todo's"</p>
+    <input type="text" placeholder="Filter your todo's" />
+    <div id="listItems">
+      <ol *ngFor="let item of toDoList; index as i">
+        <li></li>
+        <button id="deleteItem">
+          <img src="src/assets/delete.png" alt="A red delete icon" />
+        </button>
+      </ol>
+    </div>
+    <form id="add" #addItemForm="ngForm" (ngSubmit)="AddATodo()">
+      <input type="text" placeholder="Add a Todo" />
+      <button>Add</button>
+    </form>
+  </section>
 </section>
