@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { NgForm } from "@angular/forms";
 
 @Component({
   selector: "app-todolist",
@@ -28,10 +29,13 @@ export class TodolistComponent implements OnInit {
     return greeting;
   }
 
-  addATodo() {
-    console.log("ehhhh");
-    this.toDoList.push();
-    console.log(this.toDoList);
+  addATodo(form: NgForm) {
+    console.log(form.value.todoItem);
+    this.toDoList.push({
+      todo: form.value.todoItem,
+      completed: false
+    });
+    // console.log(this.toDoList);
   }
 
   ngOnInit() {}

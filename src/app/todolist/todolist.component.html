@@ -8,13 +8,11 @@
     <input type="text" placeholder="Filter your todo's" />
     <div id="listItems">
       <ol *ngFor="let item of toDoList; index as i">
-        <li></li>
-        <button id="deleteItem">
-          <img src="src/assets/delete.png" alt="A red delete icon" />
-        </button>
+        <li>{{ item.todo }}</li>
+        <button id="deleteItem">Delete</button>
       </ol>
     </div>
-    <form id="add" #addItemForm="ngForm" (ngSubmit)="addATodo()">
+    <form id="add" #addItemForm="ngForm" (ngSubmit)="addATodo(addItemForm)">
       <input type="text" name="todoItem" placeholder="Add a Todo" ngModel />
       <button>Add</button>
     </form>
