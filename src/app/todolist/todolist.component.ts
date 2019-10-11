@@ -35,8 +35,10 @@ export class TodolistComponent implements OnInit {
       todo: form.value.todoItem,
       completed: false
     });
-    // console.log(this.toDoList);
+    form.reset();
   }
+
+  deleteATodo() {}
 
   ngOnInit() {}
 }
