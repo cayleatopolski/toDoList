@@ -10,7 +10,11 @@
       <ol>
         <li *ngFor="let item of toDoList; index as i">
           {{ item.todo }}
-          <i class="fas fa-times" id="deleteItem" (click)="deleteATodo()"></i>
+          <i
+            class="fas fa-times"
+            id="deleteItem"
+            (click)="deleteATodo(index)"
+          ></i>
         </li>
       </ol>
     </div>
