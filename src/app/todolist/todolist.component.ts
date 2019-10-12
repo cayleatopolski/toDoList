@@ -29,8 +29,7 @@ export class TodolistComponent implements OnInit {
     return greeting;
   }
 
-  addATodo(form: NgForm) {
-    console.log(form.value.todoItem);
+  addATodo(form: NgForm): void {
     this.toDoList.push({
       todo: form.value.todoItem,
       completed: false
@@ -38,7 +37,9 @@ export class TodolistComponent implements OnInit {
     form.reset();
   }
 
-  deleteATodo() {}
+  deleteATodo(index: number): void {
+    this.toDoList.splice(index, 1);
+  }
 
   ngOnInit() {}
 }

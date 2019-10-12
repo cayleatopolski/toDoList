@@ -27,4 +27,5 @@ h2 {
 input {
   height: 20px;
   border-radius: 4px;
+  padding-left: 3px;
 }

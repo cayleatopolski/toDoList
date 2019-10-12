@@ -9,11 +9,11 @@
     <div id="listItems">
       <ol *ngFor="let item of toDoList; index as i">
         <li>{{ item.todo }}</li>
-        <button id="deleteItem">Delete</button>
+        <button id="deleteItem" (click)="deleteATodo()">Delete</button>
       </ol>
     </div>
     <form id="add" #addItemForm="ngForm" (ngSubmit)="addATodo(addItemForm)">
-      <input type="text" name="todoItem" placeholder="Add a Todo" ngModel />
+      <input type="text" name="todoItem" placeholder="Add a todo" ngModel />
       <button>Add</button>
     </form>
   </section>
