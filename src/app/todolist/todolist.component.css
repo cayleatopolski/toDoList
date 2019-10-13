@@ -76,6 +76,13 @@ i {
   align-items: center;
 }
 
+input {
+  width: 50%;
+}
+
 #addButton {
   height: 25px;
+  width: 25%;
+  margin-top: 5px;
+  border-radius: 5px;
 }
