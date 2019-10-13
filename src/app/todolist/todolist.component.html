@@ -3,9 +3,11 @@
     <h1>{{ greeting }}</h1>
   </div>
   <section id="toDoList">
-    <h2>ToDo List</h2>
-    <p>A place to store your "todo's"</p>
-    <input type="text" placeholder="Search for a todo item" id="filter" />
+    <div id="headers">
+      <h2>To-do List</h2>
+      <p>A place to store your "todo's"</p>
+      <input type="text" placeholder="Search for a todo item" id="filter" />
+    </div>
     <div id="listItems">
       <ol>
         <li *ngFor="let item of toDoList; index as i">

@@ -1,3 +1,10 @@
+#headers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 h1 {
   font-family: "Pacifico", cursive;
   font-size: 4em;
