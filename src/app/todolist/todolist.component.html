@@ -8,9 +8,9 @@
     <input type="text" placeholder="Search for a todo item" />
     <div id="listItems">
       <ol>
-        <li *ngFor="let item of toDoList; index as i" (click)="deleteATodo(i)">
+        <li *ngFor="let item of toDoList; index as i">
           {{ item.todo }}
-          <i class="fas fa-times" id="deleteItem"></i>
+          <i class="fas fa-times" id="deleteItem" (click)="deleteATodo(i)"></i>
         </li>
       </ol>
     </div>
