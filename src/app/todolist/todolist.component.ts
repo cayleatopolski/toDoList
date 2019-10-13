@@ -37,8 +37,8 @@ export class TodolistComponent implements OnInit {
     form.reset();
   }
 
-  deleteATodo(index: number): void {
-    this.toDoList.splice(index, 1);
+  deleteATodo(i: number): void {
+    this.toDoList.splice(i, 1);
   }
 
   ngOnInit() {}

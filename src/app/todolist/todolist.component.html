@@ -5,21 +5,22 @@
   <section id="toDoList">
     <h2>TODO List</h2>
     <p>A place to store your "todo's"</p>
-    <input type="text" placeholder="Filter your todo's" />
+    <input type="text" placeholder="Search for a todo item" />
     <div id="listItems">
       <ol>
-        <li *ngFor="let item of toDoList; index as i">
+        <li *ngFor="let item of toDoList; index as i" (click)="deleteATodo(i)">
           {{ item.todo }}
-          <i
-            class="fas fa-times"
-            id="deleteItem"
-            (click)="deleteATodo(index)"
-          ></i>
+          <i class="fas fa-times" id="deleteItem"></i>
         </li>
       </ol>
     </div>
     <form id="add" #addItemForm="ngForm" (ngSubmit)="addATodo(addItemForm)">
-      <input type="text" name="todoItem" placeholder="Add a todo" ngModel />
+      <input
+        type="text"
+        name="todoItem"
+        placeholder="Add a todo item to your list"
+        ngModel
+      />
       <button>Add</button>
     </form>
   </section>
